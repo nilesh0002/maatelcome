@@ -593,21 +593,71 @@ footer {
 }
 
 @media (max-width: 640px) {
-  .section { padding: 56px 4vw; }
-  nav { padding-inline: 4vw; }
-  .hero { padding: 50px 4vw 30px; }
-  .hero p { font-size: 16px; }
+  body {
+    padding-bottom: 88px;
+  }
+  .section {
+    padding: 60px 4vw;
+  }
+  nav {
+    padding-inline: 4vw;
+    background: rgba(12, 14, 16, 0.98);
+  }
+  .hero {
+    padding: 54px 4vw 34px;
+  }
+  .hero h1 {
+    font-size: clamp(32px, 9vw, 40px);
+    line-height: 1.18;
+  }
+  .hero p {
+    font-size: 17px;
+    color: #d6d6db;
+  }
+  .trust-badge {
+    width: 100%;
+    border-color: rgba(214,51,36,0.35);
+    background: rgba(214,51,36,0.14);
+    font-size: 13px;
+    text-align: center;
+  }
   .grid-3,
   .steps,
   .contact-form .row {
     grid-template-columns: 1fr;
   }
   .btn {
-    min-height: 48px;
+    min-height: 50px;
     font-size: 16px;
-    padding-inline: 18px;
+    font-weight: 700;
+    padding-inline: 20px;
   }
-  .mobile-sticky-cta { display: flex; }
+  .card,
+  .step,
+  .review,
+  .contact-card {
+    border-color: rgba(255,255,255,0.18);
+    box-shadow: 0 8px 22px rgba(0,0,0,0.26);
+  }
+  .logo-name {
+    font-size: 20px;
+  }
+  .logo-name sub {
+    font-size: 8px;
+    letter-spacing: 1.6px;
+  }
+  .mobile-sticky-cta {
+    display: flex;
+    padding: 12px 12px calc(12px + env(safe-area-inset-bottom));
+    background: rgba(10, 12, 14, 0.99);
+    border-top: 1px solid rgba(214,51,36,0.38);
+    box-shadow: 0 -8px 24px rgba(0,0,0,0.52);
+  }
+  .mobile-sticky-cta .btn {
+    min-height: 52px;
+    font-size: 15px;
+    border-radius: 12px;
+  }
 }
 </style>
 </head>
