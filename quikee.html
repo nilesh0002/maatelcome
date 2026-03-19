@@ -65,57 +65,59 @@ nav {
   text-decoration: none;
   display: flex;
   align-items: center;
-  gap: 14px;
-  transition: all 0.3s ease;
+  gap: 12px;
+  transition: opacity 0.2s ease;
 }
 .logo:hover {
-  transform: translateY(-2px);
+  opacity: 0.98;
 }
 .logo-mark {
-  width: 46px;
-  height: 46px;
+  width: 44px;
+  height: 44px;
   border-radius: 12px;
-  background: linear-gradient(135deg, #c91f11 0%, #d63324 50%, #e0251a 100%);
+  background: linear-gradient(160deg, #21252b 0%, #171a1f 100%);
+  border: 1px solid var(--line-strong);
   display: grid;
   place-items: center;
-  box-shadow: 0 4px 16px rgba(214, 51, 36, 0.35), 0 0 1px rgba(255,255,255,0.5) inset;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255,255,255,0.06);
   position: relative;
   overflow: hidden;
-  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 .logo:hover .logo-mark {
-  box-shadow: 0 8px 32px rgba(214, 51, 36, 0.45), 0 0 1px rgba(255,255,255,0.5) inset;
+  border-color: rgba(214, 51, 36, 0.35);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(214, 51, 36, 0.18);
   transform: translateY(-1px);
 }
 .logo-mark::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 30% 25%, rgba(255,255,255,0.25), transparent 70%);
+  background: radial-gradient(circle at 28% 25%, rgba(255,255,255,0.12), transparent 70%);
   pointer-events: none;
 }
 .logo-img {
-  width: 28px;
-  height: 28px;
+  width: 27px;
+  height: 27px;
   object-fit: contain;
   position: relative;
   z-index: 2;
 }
 .logo-name {
   font-family: "Playfair Display", serif;
-  font-size: 22px;
+  font-size: 21px;
   line-height: 1;
   font-weight: 700;
-  letter-spacing: -0.5px;
+  letter-spacing: -0.3px;
 }
 .logo-name sub {
   display: block;
   font-family: "DM Sans", sans-serif;
   font-size: 9px;
-  color: #d63324;
+  color: var(--muted);
   letter-spacing: 1.8px;
   text-transform: uppercase;
-  margin-top: 5px;
+  margin-top: 4px;
   font-weight: 600;
 }
 .nav-links {
