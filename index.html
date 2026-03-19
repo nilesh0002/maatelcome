@@ -142,6 +142,23 @@
       box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
     }
 
+    .nav-cta {
+      padding: 6px 12px;
+      font-size: 13px;
+      border-radius: 8px;
+      background: transparent;
+      border: 1px solid #e0251a;
+      color: #e0251a;
+      font-weight: 600;
+      box-shadow: none;
+      min-height: auto;
+    }
+
+    .nav-cta:hover {
+      background: #e0251a;
+      color: white;
+    }
+
     .btn:active {
       transform: translateY(1px);
     }
@@ -374,22 +391,24 @@
 
     .sticky-bar {
       position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      display: flex;
+      bottom: 12px;
+      left: 10px;
+      right: 10px;
+      display: none;
+      gap: 10px;
       z-index: 999;
-      height: 50px;
     }
 
     .sticky-bar a {
       flex: 1;
       text-align: center;
-      line-height: 50px;
+      padding: 12px;
+      border-radius: 12px;
+      font-size: 14px;
       font-weight: 600;
       text-decoration: none;
       color: white;
-      font-size: 14px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
     }
 
     .call-btn {
@@ -429,7 +448,7 @@
 
     @media (max-width: 640px) {
       body {
-        padding-bottom: 60px;
+        padding-bottom: 80px;
       }
 
       .topbar {
@@ -447,6 +466,11 @@
         padding: 0 10px;
       }
 
+      .nav-cta {
+        padding: 6px 10px;
+        font-size: 12px;
+      }
+
       .brand {
         gap: 8px;
       }
@@ -462,13 +486,6 @@
 
       .brand p {
         font-size: 0.72rem;
-      }
-
-      .topbar .btn-call {
-        min-height: 38px;
-        padding: 8px 10px;
-        font-size: 13px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
       }
 
       .hero {
@@ -543,7 +560,7 @@
         font-size: 15px;
       }
 
-      .topbar .btn-call {
+      .topbar .nav-cta {
         font-size: 12px;
         padding: 8px;
       }
@@ -568,7 +585,7 @@
         <a href="#contact">Contact</a>
       </nav>
 
-      <a class="btn btn-call" href="tel:+917301000444" aria-label="Call Maa Telecom now">Call Now</a>
+      <a class="btn nav-cta" href="tel:+917301000444" aria-label="Call Maa Telecom now">Call Now</a>
     </div>
   </header>
 
