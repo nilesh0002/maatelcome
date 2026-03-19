@@ -131,7 +131,7 @@
       font-weight: 600;
       cursor: pointer;
       transition: background-color 0.2s ease, transform 0.2s ease;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
     }
 
     .btn-red {
@@ -139,7 +139,7 @@
       font-weight: 600;
       padding: 12px;
       font-size: 14px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
     }
 
     .btn:active {
@@ -212,7 +212,7 @@
       margin-top: 18px;
       display: flex;
       flex-wrap: wrap;
-      gap: 12px;
+      gap: 10px;
     }
 
     section {
@@ -377,18 +377,19 @@
       bottom: 0;
       left: 0;
       width: 100%;
-      display: none;
+      display: flex;
       z-index: 999;
+      height: 50px;
     }
 
     .sticky-bar a {
       flex: 1;
       text-align: center;
-      padding: 14px;
+      line-height: 50px;
       font-weight: 600;
       text-decoration: none;
       color: white;
-      font-size: 15px;
+      font-size: 14px;
     }
 
     .call-btn {
@@ -428,21 +429,21 @@
 
     @media (max-width: 640px) {
       body {
-        padding-bottom: 64px;
+        padding-bottom: 60px;
       }
 
       .topbar {
-        height: 58px;
+        height: 56px;
       }
 
       .topbar-inner {
-        min-height: 58px;
+        min-height: 56px;
         padding: 0 10px;
         gap: 8px;
       }
 
       nav {
-        height: 58px;
+        height: 56px;
         padding: 0 10px;
       }
 
@@ -463,13 +464,20 @@
         font-size: 0.72rem;
       }
 
+      .topbar .btn-call {
+        min-height: 38px;
+        padding: 8px 10px;
+        font-size: 13px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+      }
+
       .hero {
         padding-top: 18px;
       }
 
       .hero-card {
-        padding: 18px;
-        border-radius: 16px;
+        padding: 16px;
+        border-radius: 14px;
       }
 
       .hero h1 {
@@ -481,6 +489,7 @@
       .hero p {
         font-size: 14px;
         line-height: 1.5;
+        margin-top: 6px;
       }
 
       .hero-actions .btn {
@@ -516,6 +525,27 @@
 
       .sticky-bar {
         display: flex;
+      }
+    }
+
+    @media (min-width: 641px) {
+      .sticky-bar {
+        display: none;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .brand p {
+        display: none;
+      }
+
+      .logo-name {
+        font-size: 15px;
+      }
+
+      .topbar .btn-call {
+        font-size: 12px;
+        padding: 8px;
       }
     }
   </style>
@@ -690,8 +720,8 @@
   </footer>
 
   <div class="sticky-bar" aria-label="Mobile quick actions">
-    <a href="tel:+917301000444" class="call-btn">Call</a>
-    <a href="https://wa.me/917301000444" class="wa-btn" target="_blank" rel="noopener">WhatsApp</a>
+    <a href="tel:+917301000444" class="call-btn">📞 Call</a>
+    <a href="https://wa.me/917301000444" class="wa-btn" target="_blank" rel="noopener">💬 WhatsApp</a>
   </div>
 </body>
 </html>
